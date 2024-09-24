@@ -6,19 +6,21 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct FeedCell: View {
-    let post: Int
+    let post: PostModel
+    var player: AVPlayer
+    
+    init(post: PostModel, player: AVPlayer) {
+        self.post = post
+        self.player = player
+    }
     
     var body: some View {
         ZStack {
-            Rectangle()
-                .fill(.pink)
+            TiktokVideoPlayer(player: player)
                 .containerRelativeFrame([.horizontal, .vertical])
-                .overlay {
-                    Text("Post \(post)")
-                        .foregroundStyle(.white)
-                }
             
             VStack {
                 Spacer()
@@ -98,9 +100,21 @@ struct FeedCell: View {
             }
             .padding()
         }
+        .onTapGesture {
+            switch player.timeControlStatus {
+            case .paused:
+                player.play()
+            case .waitingToPlayAtSpecifiedRate:
+                break
+            case .playing:
+                player.pause()
+            @unknown default:
+                break
+            }
+        }
     }
 }
 
 #Preview {
-    FeedCell(post: 1)
+    FeedCell(post: .init(id: NSUUID().uuidString, videoUrl: "https://www.pexels.com/download/video/27857021/?fps=59.939998626708984&h=720&w=1280"), player: AVPlayer())
 }

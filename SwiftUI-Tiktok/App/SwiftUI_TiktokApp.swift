@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_TiktokApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
     }
 }

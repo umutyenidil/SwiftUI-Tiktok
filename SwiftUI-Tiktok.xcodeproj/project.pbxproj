@@ -23,6 +23,9 @@
 		E83B2E652CA1646C00E25187 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B2E642CA1646C00E25187 /* ProfileHeaderView.swift */; };
 		E83B2E672CA1647300E25187 /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B2E662CA1647300E25187 /* PostGridView.swift */; };
 		E8BCFA792CA2A71D00D0A7EE /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCFA782CA2A71D00D0A7EE /* UserStatView.swift */; };
+		E8BCFA7B2CA2ABE700D0A7EE /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCFA7A2CA2ABE700D0A7EE /* PostModel.swift */; };
+		E8BCFA7F2CA2AC3600D0A7EE /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCFA7E2CA2AC3600D0A7EE /* FeedViewModel.swift */; };
+		E8BCFA812CA2B00400D0A7EE /* TiktokVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BCFA802CA2B00400D0A7EE /* TiktokVideoPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		E83B2E642CA1646C00E25187 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileHeaderView.swift; path = ../View/ProfileHeaderView.swift; sourceTree = "<group>"; };
 		E83B2E662CA1647300E25187 /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 		E8BCFA782CA2A71D00D0A7EE /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
+		E8BCFA7A2CA2ABE700D0A7EE /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		E8BCFA7E2CA2AC3600D0A7EE /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		E8BCFA802CA2B00400D0A7EE /* TiktokVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiktokVideoPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 		E83B2E3B2CA152B700E25187 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E8BCFA7A2CA2ABE700D0A7EE /* PostModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +207,8 @@
 		E83B2E482CA1537100E25187 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				E8BCFA7C2CA2AC1800D0A7EE /* Service */,
+				E8BCFA7D2CA2AC1C00D0A7EE /* ViewModel */,
 				E83B2E522CA158B100E25187 /* View */,
 			);
 			path = Feed;
@@ -208,6 +217,7 @@
 		E83B2E492CA1537200E25187 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E8BCFA802CA2B00400D0A7EE /* TiktokVideoPlayer.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -287,6 +297,21 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		E8BCFA7C2CA2AC1800D0A7EE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E8BCFA7D2CA2AC1C00D0A7EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E8BCFA7E2CA2AC3600D0A7EE /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -358,7 +383,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E83B2E632CA163FC00E25187 /* CurrentUserProfileView.swift in Sources */,
+				E8BCFA7B2CA2ABE700D0A7EE /* PostModel.swift in Sources */,
 				E83B2E5B2CA1602900E25187 /* UserCell.swift in Sources */,
+				E8BCFA812CA2B00400D0A7EE /* TiktokVideoPlayer.swift in Sources */,
 				E83B2E592CA15FFA00E25187 /* ExploreView.swift in Sources */,
 				E8BCFA792CA2A71D00D0A7EE /* UserStatView.swift in Sources */,
 				E83B2E542CA158B900E25187 /* FeedView.swift in Sources */,
@@ -370,6 +397,7 @@
 				E83B2E4E2CA1540B00E25187 /* MainTabView.swift in Sources */,
 				E83B2E562CA15ADD00E25187 /* FeedCell.swift in Sources */,
 				E83B2E602CA161B000E25187 /* NotificationCell.swift in Sources */,
+				E8BCFA7F2CA2AC3600D0A7EE /* FeedViewModel.swift in Sources */,
 				E83B2E5E2CA161A200E25187 /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
