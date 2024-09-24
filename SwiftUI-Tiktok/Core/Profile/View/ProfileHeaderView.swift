@@ -28,28 +28,24 @@ struct ProfileHeaderView: View {
                 
                 UserStatView(value: 5320, label: "Likes")
             }
+            
+            Button {
+                
+            } label: {
+                Text("Edit Profile")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .frame(width: 360, height: 32)
+                    .foregroundStyle(.black)
+                    .background(Color(.systemGray6))
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+            }
+            
+            Divider()
         }
     }
 }
 
 #Preview {
     ProfileHeaderView()
-}
-
-struct UserStatView: View {
-    let value: Int
-    let label: String
-    
-    var body: some View {
-        VStack {
-            Text("\(value)")
-                .font(.subheadline)
-                .fontWeight(.bold)
-            
-            Text(label)
-                .font(.caption)
-                .foregroundStyle(.gray)
-        }
-        .frame(width: 80, alignment: .center)
-    }
 }
